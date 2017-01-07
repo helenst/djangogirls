@@ -192,6 +192,10 @@ class Event(models.Model):
         self.is_deleted = True
         self.save()
 
+    @property
+    def email_slug(self):
+        return self.email.split('@')[0]
+
 
 @python_2_unicode_compatible
 class ContactEmail(models.Model):

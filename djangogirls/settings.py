@@ -280,3 +280,8 @@ if 'OPBEAT_SECRET_TOKEN' in os.environ:
     ] + MIDDLEWARE
 
 CODEMIRROR_PATH = "vendor/codemirror/"
+
+# path to a json file supplying google api creds 'djangogirls_website-93134565f52d.json'
+GOOGLE_API_CREDENTIALS_FILE = os.environ.get('GOOGLE_API_CREDENTIALS_FILE', 'credentials.json')
+# an email address that google API can delegate to
+GOOGLE_API_DELEGATED_EMAIL = os.environ.get('GOOGLE_API_DELEGATED_EMAIL', 'hello@djangogirls.org')
